@@ -7,7 +7,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>starvin</h1>
+        <h1>starving</h1>
         <SearchBar />
         <BusinessList />
       </div>
