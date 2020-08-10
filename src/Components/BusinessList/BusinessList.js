@@ -4,13 +4,18 @@ import './BusinessList.css'
 
 //The function within the div will iterate through each instance and return an element
 export default class BusinessList extends React.Component {
-  render() {
-    return (
-      <div className="BusinessList">
-        {this.props.businesses.map(business => {
-          return <Business key={business.id} business={business} />;
-        })}
-      </div>
-    );
-  }
-}
+   /* {this.props.businesses.map(business => {
+        return <Business key={business.id} business={business} />;
+    })}*/
+    render() {
+        return (
+            <div className="BusinessList">
+               <Business/> 
+               <Business />
+               <Business />
+               <Business />
+               <Business />
+            </div>
+        );
+    }
+} 

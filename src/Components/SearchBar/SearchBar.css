@@ -1,0 +1,97 @@
+.SearchBar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("https://images.pexels.com/photos/1192031/pexels-photo-1192031.jpeg?cs=srgb&dl=variety-of-spices-and-vegetables-on-black-surface-1192031.jpg&fm=jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 25rem;
+}
+
+.sort-options ul{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.22rem;
+    color: #ffffff;
+}
+
+.sort-options li{
+    cursor: pointer;
+    width: 4.33rem;
+    border-bottom: 1px solid #fff;
+    padding: 0 2.58rem 0.33rem 2.58rem;
+    line-height: 1.13rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.83rem;
+    transition: color 0.25s;
+}
+
+.SearchBar .sort-options li:hover{
+    color: #d4cfcf
+}
+
+.sort-options li.active,
+.sort-options li.active:hover{
+    border-bottom: 1px solid #f0c36c;
+    color: #f0c36c;
+}
+
+.fields {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.88rem;
+}
+
+.fields input{
+    width: 21rem;
+    padding: 0.66rem 1rem;
+    margin: 2.22rem;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    font-size: 0.77rem;
+    font-weight: 500;
+}
+
+.fields input:last-child{
+    margin-right: 0;
+}
+
+.submit{
+    text-align: center;
+}
+
+.submit a{
+    border-radius: 4px;
+    padding: 0.72rem 1.7rem;
+    background-color: #cca353;
+    color: #ffffff;
+    font-weight: 600;
+    transition: background-color 0.5s;
+}
+
+.submit a:hover{
+    cursor: pointer;
+    background-color: #a7874b
+}
+
+@media only screen and (max-width: 560px){
+    .SearchBar{
+        background-image: url("https://images.pexels.com/photos/1192031/pexels-photo-1192031.jpeg?cs=srgb&dl=variety-of-spices-and-vegetables-on-black-surface-1192031.jpg&fm=jpg")
+    }
+    .sort-options ul{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .fields{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fields input{
+        margin-right: 0;
+        margin-bottom: 0.86rem;
+    }
+
+}
