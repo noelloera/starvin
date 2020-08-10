@@ -3,17 +3,43 @@ import "./SearchBar.css"
 
 const searchAPI = "https://api.yelp.com/v3/businesses/search"
 
-const options = {
-    "Best Match": "best_match",
-    "Highest Rating": "rating",
-    "Most Reviews": "review_count"
-}
 
 export default class SearchBar extends React.Component {
+    constructor(props){
+        super(props);
+        this.state={
+            term:"",
+            location:"",
+            sort_by:"best_match"
+        }
+        this.options = {
+            "Best Match": "best_match",
+            "Highest Rating": "rating",
+            "Most Reviews": "review_count"
+        }
+
+    }
+
+    handleSortChange(value){
+        this.setState = {sort_by: value}
+    }
+
+    getSortByClass(sortOption){
+        if(this.state.sort_by===sortOption){
+            return "active"
+        }else{
+            return ""
+        }
+    }
+
     renderSortOptions() {
-        return Object.keys(options).map((option) => {
-            let sortOption = options[option]
-            return <li key={sortOption}>{sortOption}</li>
+        return Object.keys(this.options).map((option) => {
+            let sortOption = this.options[option]
+            return <li 
+            onClick={this.handleSortChange.bind(this, sortOption)}
+            className={this.getSortByClass(sortOption)} 
+            key={sortOption}>{sortOption}
+            </li>
         })
     }
 
