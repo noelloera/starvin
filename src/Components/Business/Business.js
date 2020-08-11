@@ -60,10 +60,10 @@ export default class Business extends React.Component {
 
     render() {
         return (
-            <a href={this.props.business.siteUrl}>
+            <a href={this.props.business.url}>
                 <div className="Business">
                     <div className="image-container">
-                        <img src={this.props.business.imageSrc} alt="" />
+                        <img src={this.props.business.image_url} alt="" />
                     </div>
                     <div className="yelp-name">
                         <h1>{this.props.business.name}</h1>
@@ -71,15 +71,14 @@ export default class Business extends React.Component {
                     </div>
                     <div className="business-information">
                         <div className="Business-address">
-                            <p>{this.props.business.address}</p>
-                            <p>{this.props.business.city}</p>
-                            <p>{this.props.business.state}, {this.props.business.zipCode}</p>
+                            <p>{this.props.business.location.address1}</p>
+                            <p>{this.props.business.location.city}</p>
+                            <p>{this.props.business.location.state}, {this.props.business.location.zip_code}</p>
                         </div>
                         <div className="Business-reviews">
-                            <h2>{this.props.business.category}</h2>
+                            <h2>{this.props.business.categories.alias}</h2>
                             {this.starDisplay()}
-                            <p>{this.props.business.reviewCount} reviews</p>
-                            <a href="yelp.com">...read reviews</a>
+                            <p>{this.props.business.review_count} reviews</p>
                         </div>
                     </div>
                 </div>

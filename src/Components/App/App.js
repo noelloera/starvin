@@ -1,37 +1,35 @@
 import React from "react";
-import logo from "../../logo.svg";
 import "./App.css";
-import { render } from "@testing-library/react";
 //Components
 import SearchBar from '../SearchBar/SearchBar'
 import BusinessList from '../BusinessList/BusinessList'
+const key = process.env.REACT_APP_KEY
 
 
-const business = {
-  imageSrc: "https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg",
-  siteUrl: "https://somewebsite",
-  name: "MarginOtto Pizzeria",
-  address: "1010 Paddington Way",
-  city: "Flavortown",
-  state: "NY",
-  zipCode: "10101",
-  category: "Italian",
-  rating: 4.5,
-  reviewCount: 90
-}
+const searchAPI = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?`
 
-const businesses =[
-  business,
-  business,
-  business,
-  business, 
-  business,
-  business
-]
+
 
 export default class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state={businesses:[
+    ]}
+    this.searchYelp = this.searchYelp.bind(this)
+  }
 searchYelp(term,location,sortBy){
-  console.log(`Now searching for... ${term}, in ${location}, ${sortBy}`)
+  if(term&& location&& sortBy){
+    fetch(`${searchAPI}term=${term}&location=${location}&sort_by=${sortBy}`,{
+      headers:{
+        Authorization: "Bearer "+key}
+    }).then(async response=>{ 
+      let allBusinesses = await (await response.json()).businesses
+      this.setState({businesses:allBusinesses})
+    })
+  }else{
+    alert("Cannot Load Empty Values")
+    window.location = "/"
+  }
 }
 
   render() {
@@ -39,7 +37,7 @@ searchYelp(term,location,sortBy){
       <div className="App">
         <h3>starvin'</h3>
         <SearchBar search={this.searchYelp}/>
-        <BusinessList businesses={businesses}/>
+        <BusinessList businesses={this.state.businesses}/>
       </div>
     );
   }

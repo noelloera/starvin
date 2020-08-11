@@ -1,7 +1,6 @@
 import React from 'react'
 import "./SearchBar.css"
 
-const searchAPI = "https://api.yelp.com/v3/businesses/search"
 
 
 export default class SearchBar extends React.Component {
@@ -58,7 +57,7 @@ export default class SearchBar extends React.Component {
     }
     //Submit handler for searching
     handleSearch(e) {
-        if (this.state.term!=="" && this.state.location!=="") {
+        if (this.state.term !== "" && this.state.location !== "") {
             this.props.search(
                 this.state.term,
                 this.state.location,
@@ -71,7 +70,7 @@ export default class SearchBar extends React.Component {
 
     render() {
         return (
-            <div className="SearchBar">
+            <form className="SearchBar">
                 <div className="sort-options">
                     <ul>
                         {this.renderSortOptions()}
@@ -86,10 +85,10 @@ export default class SearchBar extends React.Component {
                         placeholder="Where? (City, Address, Zip)"></input>
                 </div>
                 <div className="submit">
-                    <a
-                        onClick={this.handleSearch}>Let's Go</a>
+                    <button
+                        onClick={this.handleSearch}>Let's Go</button>
                 </div>
-            </div>
+            </form>
         )
     }
 }
