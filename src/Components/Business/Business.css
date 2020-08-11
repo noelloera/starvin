@@ -1,3 +1,9 @@
+
+a { 
+    color: inherit; 
+    text-decoration: none;
+} 
+
 .Business{
     display: flex;
     flex-direction: column;
@@ -11,11 +17,23 @@
     height: 17rem;
     margin: 0.5rem;
 }
+.yelp-name{
+    display: flex;
+    justify-content: space-between;
+}
 
-.Business h1{
-    margin: 0.3rem 0.3rem;
+
+.yelp-name h1{
+    margin: 0.3rem 0.4rem;
     font-size: 1.4rem;
-    font-weight: 600;
+    font-weight: 900;
+    text-transform: uppercase
+}
+
+.yelp-name img{
+    width: 25%;
+    height: 25%
+
 }
 
 .Business-information{

@@ -9,6 +9,7 @@ import BusinessList from '../BusinessList/BusinessList'
 
 const business = {
   imageSrc: "https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg",
+  siteUrl: "https://somewebsite",
   name: "MarginOtto Pizzeria",
   address: "1010 Paddington Way",
   city: "Flavortown",
@@ -29,11 +30,15 @@ const businesses =[
 ]
 
 export default class App extends React.Component {
+searchYelp(term,location,sortBy){
+  console.log(`Now searching for... ${term}, in ${location}, ${sortBy}`)
+}
+
   render() {
     return (
       <div className="App">
         <h3>starvin'</h3>
-        <SearchBar />
+        <SearchBar search={this.searchYelp}/>
         <BusinessList businesses={businesses}/>
       </div>
     );
