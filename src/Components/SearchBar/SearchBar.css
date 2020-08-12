@@ -46,11 +46,11 @@
 .fields input{
     width: 21rem;
     padding: 0.66rem 1rem;
-    margin: 2.22rem;
     border: 1px solid #fff;
     border-radius: 4px;
     font-size: 16px;
     font-weight: 500;
+    margin-right: 2.22rem;
 }
 
 .fields input:last-child{
@@ -69,6 +69,8 @@
     color: #ffffff;
     font-weight: 700;
     transition: background-color 0.5s;
+    margin-bottom:3.5rem;
+
 }
 
 .submit button:hover{
@@ -81,19 +83,29 @@
         background-image: url("https://images.pexels.com/photos/1192031/pexels-photo-1192031.jpeg?cs=srgb&dl=variety-of-spices-and-vegetables-on-black-surface-1192031.jpg&fm=jpg")
     }
     .sort-options ul{
-        margin-top: .5rem;
         margin-left: 2rem;
         margin-right: 2rem;
     }
+    .sort-options li{
+        font-size: 14.5px;
+    }
 
     .fields{
+        align-self: center;
         width: 20rem;
         flex-direction: column;
-        align-items: center;
+        margin-bottom: 1.2rem;
     }
 
     .fields input{
-        text-align: center;
-        margin-bottom: 0.86rem;
+        padding: 0.9rem 1rem;
+        align-self: center;
+        margin-right: 0;
+        margin-bottom: 0.99rem;
+    }
+    .submit button{
+        width: 150px;
+        font-size: 14.5px;
+        margin-bottom: 1.7rem;
     }
 }

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,500,600");
 @import url("https://fonts.googleapis.com/css?family=Poppins:600");
+@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap");
 
 html,
 body,
@@ -89,10 +90,9 @@ video {
   font-family: "Work Sans", sans-serif;
   vertical-align: baseline;
 }
-html{
+html {
   background: black;
 }
-
 
 /* HTML5 display-role reset for older browsers */
 article,
@@ -129,5 +129,9 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  background: linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(27,27,27,1) 100%);
+  background: linear-gradient(
+    360deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(27, 27, 27, 1) 100%
+  );
 }

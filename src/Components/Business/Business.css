@@ -1,75 +1,81 @@
-
-a { 
-    color: inherit; 
-    text-decoration: none;
-} 
-
-.Business{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 25rem;
-    width: 20rem;
-    margin: 0 0.6rem 2.3rem 0.5rem;
-    background-color: white;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.Business .image-container{
-    height: 17rem;
-    margin: 0.5rem;
-}
-.yelp-name{
-    display: flex;
-    justify-content: space-between;
-}
-
-
-.yelp-name h1{
-    margin: 0.3rem 0.4rem;
-    font-size: 1.4rem;
-    font-weight: 900;
-    text-transform: uppercase
+.Business {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22rem;
+  margin: 0 0.5rem 2.3rem 0.5rem;
+  padding: 0.5rem;
+  background: white;
 }
 
-.yelp-name img{
-    width: 25%;
-    height: 25%
+.Business .image-container {
+  height: 22rem;
+  margin-bottom: 1rem;
+}
+.yelp-name {
+  margin-bottom: 1rem;
+}
+
+.yelp-name h1 {
+  font-family: "Rowdies", Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.yelp-name img {
+  width: 6rem;
+  height: 3rem;
+}
+
+.Business-information {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.Business-information p {
+  font-size: 1.1rem;
+  line-height: 1rem;
+}
+
+.business-address {
+  text-align: left;
+}
+
+.Business-reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.Business-reviews h2 {
+  color: #cca353;
+  font-weight: 600;
+}
+
+.star-assets {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.star-assets img {
+  width: 50%;
+  margin: 0.2rem 0rem;
 
 }
 
-.Business-information{
-    display: flex;
-    justify-content: space-between;
-}
-
-.Business-information p{
-    font-size: 1rem;
-    font-weight:300;
-    line-height: 1rem;
-}
-
-.Business-address{
-    margin-left: 0.7rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-}
-
-.Business-reviews{
-    margin: 0.4rem 0.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
-}
-
-.Business-reviews h2{
-    color: #CCA353;
-    font-weight:600;
-    margin-bottom: 0.3rem;
-}
-
-.Business-reviews img {
-    width: 25%;
+@media only screen and (max-width: 560px) {
+  .star-assets img {
+    width: 40%;
+    margin: 0.2rem 0rem;
+  }
 }
