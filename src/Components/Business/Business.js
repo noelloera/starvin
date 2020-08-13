@@ -1,4 +1,4 @@
-import React from "react";
+import React from "./node_modules/react";
 import "./Business.css";
 //Assets
 import zero from "./assets/0.png";
