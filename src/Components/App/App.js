@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
 //Components
-import SearchBar from '../SearchBar/SearchBar'
-import BusinessList from '../BusinessList/BusinessList'
+import SearchBar from '../SearchBar/SearchBar.js'
+import BusinessList from '../BusinessList/BusinessList.js'
 const key = process.env.REACT_APP_KEY
 
 
