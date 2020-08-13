@@ -1,4 +1,4 @@
-import React from "./node_modules/react";
+import React from "react";
 import "./App.css";
 //Components
 import SearchBar from '../SearchBar/SearchBar.js'
@@ -23,8 +23,14 @@ searchYelp(term,location,sortBy){
       headers:{
         Authorization: "Bearer "+key}
     }).then(async response=>{ 
-      let allBusinesses = await (await response.json()).businesses
+      try{
+        let allBusinesses = await (await response.json()).businesses
+        console.log(allBusinesses)
       this.setState({businesses:allBusinesses})
+      }catch(error){
+        alert(error)
+        window.location = "/"
+      }
     })
   }else{
     alert("Cannot Load Empty Values")
