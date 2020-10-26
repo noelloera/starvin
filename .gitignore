@@ -22,3 +22,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+src/Components/Business/._Business.js
+src/Components/App/._App.js
+src/._index.js
+._server.js
