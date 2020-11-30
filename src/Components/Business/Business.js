@@ -1,17 +1,17 @@
 import React from "react";
 import "./Business.css";
 //Assets
-import zero from "./assets/0.png";
-import one from "./assets/1.png";
-import oneAndHalf from "./assets/1_5.png";
-import two from "./assets/2.png";
-import twoAndHalf from "./assets/2_5.png";
-import three from "./assets/3.png";
-import threeAndHalf from "./assets/3_5.png";
-import four from "./assets/4.png";
-import fourAndHalf from "./assets/4_5.png";
-import five from "./assets/5.png";
-import yelp from "./assets/yelp.png";
+import zero from "../../assets/0.png";
+import one from "../../assets/1.png";
+import oneAndHalf from "../../assets/1_5.png";
+import two from "../../assets/2.png";
+import twoAndHalf from "../../assets/2_5.png";
+import three from "../../assets/3.png";
+import threeAndHalf from "../../assets/3_5.png";
+import four from "../../assets/4.png";
+import fourAndHalf from "../../assets/4_5.png";
+import five from "../../assets/5.png";
+import yelp from "../../assets/yelp.png";
 
 export default class Business extends React.Component {
   starDisplay() {
