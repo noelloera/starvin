@@ -15,7 +15,7 @@ export default class App extends React.Component {
   }
   searchYelp(term, location, sortBy) {
     if (term && location && sortBy) {
-      this.setState({ loading: true , businesses: []});
+      this.setState({ loading: true, businesses: [] });
       fetch(`${searchAPI}term=${term}&location=${location}&sort_by=${sortBy}`, {
         headers: {
           Authorization: "Bearer " + key,
@@ -41,7 +41,9 @@ export default class App extends React.Component {
       <div className="App">
         <h3>starvin'</h3>
         <SearchBar search={this.searchYelp} />
-        <div className="spinnner">{this.state.loading ? <div className="loader"></div> : null}</div>
+        <div className="spinnner">
+          {this.state.loading ? <div className="loader"></div> : null}
+        </div>
         <BusinessList businesses={this.state.businesses} />
       </div>
     );
