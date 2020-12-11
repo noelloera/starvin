@@ -28,6 +28,7 @@ input:focus {
 }
 
 .App h3 {
+  line-height:  4rem;
   padding: 0.66rem 0;
   text-align: center;
   background-color: #851b1b;
@@ -35,7 +36,9 @@ input:focus {
   font-size: 2.5rem;
   color: #fff;
 }
-
+.spinner{
+  padding-top: 3.4rem;
+}
 .loader {
   position: fixed;
   margin-top: 8px;

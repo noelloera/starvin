@@ -41,7 +41,7 @@ export default class App extends React.Component {
       <div className="App">
         <h3>starvin'</h3>
         <SearchBar search={this.searchYelp} />
-        <div className="spinnner">
+        <div className="spinner">
           {this.state.loading ? <div className="loader"></div> : null}
         </div>
         <BusinessList businesses={this.state.businesses} />
