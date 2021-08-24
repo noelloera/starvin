@@ -4,7 +4,7 @@ import "./App.css";
 import SearchBar from "../SearchBar/SearchBar.js";
 import BusinessList from "../BusinessList/BusinessList.js";
 const key = process.env.REACT_APP_KEY;
-const clientURI = process.env.CLIENT_URI;
+const clientURI = process.env.REACT_APP_CLIENT_URI;
 
 export default class App extends React.Component {
   constructor(props) {
@@ -25,6 +25,8 @@ export default class App extends React.Component {
           console.log(allBusinesses);
           this.setState({ businesses: allBusinesses, loading: false });
         } catch (error) {
+          console.log(process.env.REACT_APP_URI);
+          alert(clientURI);
           alert(error);
           window.location = "/";
         }
