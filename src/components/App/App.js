@@ -4,8 +4,7 @@ import "./App.css";
 import SearchBar from "../SearchBar/SearchBar.js";
 import BusinessList from "../BusinessList/BusinessList.js";
 const key = process.env.REACT_APP_KEY;
-
-const searchAPI = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?`;
+const clientURI = process.env.CLIENT_URI;
 
 export default class App extends React.Component {
   constructor(props) {
@@ -16,7 +15,7 @@ export default class App extends React.Component {
   searchYelp(term, location, sortBy) {
     if (term && location && sortBy) {
       this.setState({ loading: true, businesses: [] });
-      fetch(`${searchAPI}term=${term}&location=${location}&sort_by=${sortBy}`, {
+      fetch(`${clientURI}term=${term}&location=${location}&sort_by=${sortBy}`, {
         headers: {
           Authorization: "Bearer " + key,
         },
