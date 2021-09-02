@@ -135,3 +135,11 @@ table {
     rgba(27, 27, 27, 1) 100%
   );
 }
+#backgroundContainer {
+  height: 90vh;
+  z-index: -3;
+  position: absolute;
+}
+#background {
+  width: 100%;
+}
