@@ -23,10 +23,11 @@ a {
 
 .yelp-name h1 {
   font-family: "Rowdies", Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   font-weight: bolder;
   text-align: center;
+  color: black;
 }
 
 .yelp-name img {
@@ -42,7 +43,7 @@ a {
 }
 
 .Business-information p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1rem;
 }
 
