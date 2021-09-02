@@ -23,7 +23,7 @@ a {
 
 .yelp-name h1 {
   font-family: "Rowdies", Arial, Helvetica, sans-serif;
-  font-size: 1.4rem;
+  font-size: 1rem;
   text-transform: uppercase;
   font-weight: bolder;
   text-align: center;
@@ -70,7 +70,6 @@ a {
 .star-assets img {
   width: 50%;
   margin: 0.2rem 0rem;
-
 }
 
 @media only screen and (max-width: 560px) {

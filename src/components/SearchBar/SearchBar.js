@@ -78,7 +78,7 @@ export default class SearchBar extends React.Component {
         <div className="fields">
           <input
             onChange={this.handleTerm}
-            placeholder="Search Businesses"
+            placeholder="Search Restaurants / Businesses"
           ></input>
           <input
             onChange={this.handleLocation}

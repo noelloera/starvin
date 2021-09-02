@@ -3,6 +3,9 @@ const urls = [
   "https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   "https://images.pexels.com/photos/2220618/pexels-photo-2220618.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   "https://images.pexels.com/photos/4551106/pexels-photo-4551106.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  "https://images.pexels.com/photos/6427713/pexels-photo-6427713.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  "https://images.pexels.com/photos/696218/pexels-photo-696218.jpeg?cs=srgb&dl=pexels-helena-lopes-696218.jpg&fm=jpg",
+  "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
 ];
 
 const randomizeSrc = () => {

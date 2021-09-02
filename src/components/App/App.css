@@ -28,24 +28,30 @@ input:focus {
 }
 
 .App h3 {
-  line-height:  4rem;
+  line-height: 4rem;
   padding: 0.66rem 0;
   text-align: center;
-  background-color: #851b1b;
+  background-color: rgb(170, 30, 22);
   font-family: Poppins, sans-serif;
   font-size: 2.5rem;
   color: #fff;
 }
-.spinner{
+.App h1 {
+  padding: 2rem 0 1rem 0;
+  font-family: Poppins, sans-serif;
+  color: #fff;
+  text-align: center;
+}
+.spinner {
   padding-top: 3.4rem;
 }
 .loader {
   position: fixed;
-  margin-top: 8px;
+  margin-top: 20px;
   left: 50%;
   margin-left: -41px;
   border: 14px solid #f3f3f3;
-  border-top: 14px solid #851b1b;
+  border-top: 14px solid rgb(170, 30, 22);
   border-radius: 50%;
   width: 50px;
   height: 50px;
